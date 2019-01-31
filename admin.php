@@ -1,0 +1,25 @@
+<?php
+include('db.php');
+session_start();
+$_SESSION['1']='enabled';
+$_SESSION['2']='enabled';
+$_SESSION['3']='enabled';
+$_SESSION['4']='enabled';
+$op=$_POST['adm'];
+if($op=="add")
+{
+	header("Location:add1.php");
+}
+if($op=="sub")
+{
+	header("Location:remove1.php");
+}
+if($op=="av")
+{
+	header("Location:available.php");
+}
+if($op=="tr")
+{
+	header("Location:transaction.php");
+}
+?>
